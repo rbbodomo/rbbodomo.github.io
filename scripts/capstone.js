@@ -39,6 +39,16 @@ function type() {
 type();
 
 // for tab_comp responsiveness
+window.addEventListener('load', function() {
+  if (window.innerWidth < 1100) {
+      document.getElementById('tab_comp').classList.add('flex-col');
+  } else {
+      document.getElementById('tab_comp').classList.remove('flex-col');
+      document.getElementById('tab_comp').classList.remove('flex');
+      document.getElementById('tab_comp').classList.add('flex');  
+  }
+});
+
 window.addEventListener('resize', function() {
   if (window.innerWidth < 1100) {
       document.getElementById('tab_comp').classList.add('flex-col');
